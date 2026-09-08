@@ -1,0 +1,67 @@
+## --- .NET / C# ---
+[Bb]in/
+[Oo]bj/
+[L2]og/
+[Ll]ogs/
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.suo
+*.cache
+
+# Archivos compilados / DLLs locales
+*.dll
+*.exe
+*.pdb
+*.cache
+*.rsp
+
+# Archivos de publicación / builds temporales
+publish/
+[Pp]ublish/
+out/
+*.nupkg
+
+## --- IDEs & Editores ---
+
+# VS Code (Mantenemos .devcontainer pero ignoramos configuraciones locales/temporales)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Visual Studio Studio / JetBrains Rider
+.vs/
+.idea/
+*.user
+
+## --- Docker & Entorno ---
+# Ignorar archivos de variables de entorno locales con credenciales
+.env
+.env.local
+*.env
+
+# Datos o volúmenes persistentes de bases de datos si se mapean a carpetas locales
+postgres_data/
+*.db
+*.sqlite
+
+## --- Sistema Operativo ---
+# Linux
+.directory
+
+# macOS
+.DS_Store
+.AppleDouble
+.lsbf
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

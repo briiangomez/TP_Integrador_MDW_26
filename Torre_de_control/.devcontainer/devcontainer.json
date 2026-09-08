@@ -1,0 +1,19 @@
+{
+  "name": "Torre de Control API Service",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "torre-de-control-api",
+  "workspaceFolder": "/app",
+  "overrideCommand": true,
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "git.enabled": false,
+        "remote.gpgAgentForwarding": false
+      },
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+# Set default behavior to automatically handle line endings
+* text=auto
+
+## --- Archivos fuente C# / .NET ---
+*.cs text diff=csharp eol=lf
+*.csproj text eol=lf
+*.sln text eol=lf
+*.json text eol=lf
+
+## --- Web / Frontend / Configs ---
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.xml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+
+## --- Docker, Shell & CI/CD ---
+# Forzamos LF estrictamente para evitar errores en entornos Linux y contenedores
+Dockerfile text eol=lf
+docker-compose*.yml text eol=lf
+*.sh text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+## --- Archivos binarios (Git no debe intentar cambiar terminaciones) ---
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.dll binary

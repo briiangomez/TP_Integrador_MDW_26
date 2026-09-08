@@ -1,0 +1,31 @@
+services:
+  torre-de-control-api:
+    container_name: torre_de_control_api_service
+    build:
+      context: .
+      dockerfile: src/TorreDeControl.Api/Dockerfile
+      target: dev                   # <--- Forzamos el uso de la etapa con el SDK
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=TorreDeControlDb;Username=postgres;Password=TuPasswordSeguro123!
+    depends_on:
+      - db
+    volumes:
+      - .:/app                      # <--- Mapea la raíz del proyecto local a /app en el contenedor
+
+  db:
+    container_name: postgres_db
+    image: postgres:16-alpine            # Imagen oficial liviana de PostgreSQL
+    ports:
+      - "5432:5432"                       # Puerto estándar de PostgreSQL
+    environment:
+      - POSTGRES_DB=TorreDeControlDb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=TuPasswordSeguro123!
+    volumes:
+      - postgres_data:/var/lib/postgresql/data   # Persistencia de datos
+
+volumes:
+  postgres_data:                           # Volumen para no perder los datos al apagar el contenedor

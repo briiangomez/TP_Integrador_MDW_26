@@ -1,0 +1,113 @@
+# =============================================================================
+# .gitignore del repo - TP Integrador (todos los grupos)
+# Cubre .NET / Visual Studio / Rider / VS Code, frontends JS, Docker y SO.
+# =============================================================================
+
+# --- Build de .NET (bin/obj en cualquier carpeta) ---------------------------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+publish/
+*.dll
+*.exe
+*.pdb
+!**/packages/build/
+
+# --- NuGet -------------------------------------------------------------------
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+*.nuget.props
+*.nuget.targets
+
+# --- Visual Studio -----------------------------------------------------------
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.rsuser
+*.vspscc
+*.vssscc
+*.cache
+*.ilk
+*.ncb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# --- JetBrains Rider ---------------------------------------------------------
+.idea/
+*.sln.iml
+
+# --- VS Code (se versionan solo las configs compartibles) --------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# --- Tests / cobertura -------------------------------------------------------
+[Tt]est[Rr]esult*/
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+*.trx
+
+# --- Secretos y configuración local (NO pushear credenciales) ----------------
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+appsettings.Local.json
+secrets.json
+*.pfx
+*.key
+
+# --- Frontends JS (React / Vue / Angular) ------------------------------------
+node_modules/
+dist/
+build/
+.angular/
+.next/
+.nuxt/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Docker (volúmenes / datos locales) --------------------------------------
+docker-data/
+**/pgdata/
+**/mongo-data/
+
+# --- Logs y temporales -------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+
+# --- Sistema operativo -------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
